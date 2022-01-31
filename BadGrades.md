@@ -5,5 +5,5 @@ Welcome! Today, we are going to take a look at a machine on HackTheBox with a di
 
 ### Getting Started
 To get started on this machine, simply click the "Join Machine" button and wait for a second as the resources and IP address loads.
-![Join Machine](/HackTheBoxWalkthroughs/Start.png?raw=true "Optional Title")
+![Join Machine](HackTheBoxWalkthroughs/Start.PNG?raw=true "Optional Title")
 ### Reconnaissance
