@@ -28,5 +28,9 @@ Looking at this web page, we can see the basic syntax for the directory traversa
 Looks like we have a database name, database admin name, username, and password. These *could* come in handy, but they may not. Let's hold onto this file and see what else we can find too.
 <br><br>
 I poked through a lot of the folders here on my own time, so I will just share here what I found. I found a lot of dead ends and a lot of useless information, but some information that I did find to prove useful was the process list. To find it, I pasted this url into my browser: http://backdoor.btb/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl=/proc/sched_debug<br>
-In this file, I found a list of the running processes and found that gdbserver was running as PID 32998.
+In this file, I found a list of the running processes and found that gdbserver was running as PID 32998. (the PID may be different for you)
 <br><br> **INSERT SCREENSHOT** <br><br>
+If we dig into that specific process by downloading a file from /proc/[PID]/cmdline, we can verify that gdbserver is what is currently running on port 1337 (that we discorvered earlier). 
+
+### Exploiting the vulnerability
+As mentioned earlier, a lot of hacking is simply finding the vulnerabilities from outdated systems/open ports and injecting a pre written explot into these "holes". Let's do a quick search for gdbserver exploits, and we can find a python script that explots this vulnerability. If you run the metasploit console and get into the existing exploit for this vulnerability, you can see that there are some options to configure.
